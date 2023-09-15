@@ -2,6 +2,6 @@
 
 O relacionamento _"Has one"_ indica uma relação de um para um.
 
-<img src="/notes/screenshots/has-one.jpg" alt="Imagem didática" />
+![Imagem didática](./screenshots/has-one.jpg)
 
 ## 1:1
