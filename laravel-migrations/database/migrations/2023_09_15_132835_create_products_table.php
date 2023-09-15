@@ -13,6 +13,7 @@ return new class extends Migration
       $table->string('name');
       $table->string('code')->unique();
       $table->integer('quantity')->default(0);
+      $table->text('obs')->nullable();
       $table->timestamps();
     });
   }
