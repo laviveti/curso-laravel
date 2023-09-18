@@ -22,4 +22,13 @@ class AddressController extends Controller
     }
     return $address;
   }
+
+  public function create(Request $request)
+  {
+    $address = Address::create([
+      'address' => $request->address
+    ]);
+
+    return response()->json($address, 201);
+  }
 }

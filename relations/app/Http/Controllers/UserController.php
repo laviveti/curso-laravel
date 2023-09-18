@@ -22,4 +22,18 @@ class UserController extends Controller
     }
     return $user;
   }
+
+  public function create(Request $request)
+  {
+    $rawData = $request->only(['name', 'email', 'password']);
+    $hashedPassword = password_hash($rawData['password'], PASSWORD_DEFAULT);
+
+    $user = User::create([
+      'name' => $request->name,
+      'email' => $request->email,
+      'password' => $hashedPassword
+    ]);
+
+    return response()->json($user, 201);
+  }
 }
