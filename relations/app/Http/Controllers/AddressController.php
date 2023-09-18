@@ -13,4 +13,13 @@ class AddressController extends Controller
     $addresses = Address::all();
     return $addresses;
   }
+
+  public function findOne(Request $request)
+  {
+    $address = Address::find($request->id);
+    if ($address === null) {
+      return response()->json(['message' => 'Address not found'], 404);
+    }
+    return $address;
+  }
 }

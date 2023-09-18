@@ -13,4 +13,13 @@ class UserController extends Controller
     $users = User::all();
     return $users;
   }
+
+  public function findOne(Request $request)
+  {
+    $user = User::find($request->id);
+    if ($user === null) {
+      return response()->json(['message' => 'User not found'], 404);
+    }
+    return $user;
+  }
 }
