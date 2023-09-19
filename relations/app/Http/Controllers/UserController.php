@@ -20,6 +20,7 @@ class UserController extends Controller
     if ($user === null) {
       return response()->json(['message' => 'User not found'], 404);
     }
+    $user['address'] = $user->address;
     return $user;
   }
 

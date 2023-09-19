@@ -10,15 +10,21 @@ class InvoiceController extends Controller
   public function index(Request $request)
   {
     $invoices = Invoice::all();
+
     return $invoices;
   }
 
   public function findOne(Request $request)
   {
     $invoice = Invoice::find($request->id);
+
     if ($invoice === null) {
       return response()->json(['message' => 'Invoice not found'], 404);
     }
+
+    $invoice['user'] = $invoice->user;
+    $invoice['address'] = $invoice->address;
+
     return $invoice;
   }
 
