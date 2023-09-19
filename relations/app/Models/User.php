@@ -17,17 +17,18 @@ class User extends Authenticatable
     'email',
     'password',
   ];
-
-
   protected $hidden = [
     'address_id',
     'password',
     'remember_token',
   ];
-
-
   protected $casts = [
     'email_verified_at' => 'datetime',
     'password' => 'hashed',
   ];
+
+  public function addresses()
+  {
+    return $this->hasMany(Address::class);
+  }
 }
