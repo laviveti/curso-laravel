@@ -40,6 +40,6 @@
 
 - **Categories:**
   - id
-  - name
+  - title
   - color (hex string)
   - user_id
