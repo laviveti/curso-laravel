@@ -33,7 +33,7 @@
 
   - id
   - title
-  - data
+  - due_date
   - description
   - category_id
   - user_id
