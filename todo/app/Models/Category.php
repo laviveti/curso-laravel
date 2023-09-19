@@ -9,9 +9,15 @@ class Category extends Model
 {
   use HasFactory;
 
-  $fillable = [
-    ''
-  ]
+  protected $fillable = [
+    'title',
+    'color',
+    'user_id'
+  ];
+
+  protected $hidden = [ // TODO: apagar hidden se for inútil 
+    'user_id'
+  ];
 
   function user()
   {
