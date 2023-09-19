@@ -20,6 +20,8 @@ class AddressController extends Controller
     if ($address === null) {
       return response()->json(['message' => 'Address not found'], 404);
     }
+
+    $address['user'] = $address->user;
     return $address;
   }
 
