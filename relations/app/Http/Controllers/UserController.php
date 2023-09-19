@@ -29,8 +29,8 @@ class UserController extends Controller
     $hashedPassword = password_hash($rawData['password'], PASSWORD_DEFAULT);
 
     $user = User::create([
-      'name' => $request->name,
-      'email' => $request->email,
+      'name' => $rawData['name'],
+      'email' => $rawData['email'],
       'password' => $hashedPassword
     ]);
 

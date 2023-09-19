@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\AddressController;
+use App\Http\Controllers\InvoiceController;
 use App\Http\Controllers\UserController;
 use Illuminate\Support\Facades\Route;
 
@@ -12,3 +13,7 @@ Route::get('/users', [UserController::class, 'index']);
 Route::post('/addresses', [AddressController::class, 'create']);
 Route::get('/addresses/{id}', [AddressController::class, 'findOne']);
 Route::get('/addresses', [AddressController::class, 'index']);
+
+Route::post('/invoices', [InvoiceController::class, 'create']);
+Route::get('/invoices/{id}', [InvoiceController::class, 'findOne']);
+Route::get('/invoices', [InvoiceController::class, 'index']);

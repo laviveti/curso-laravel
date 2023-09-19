@@ -11,13 +11,11 @@ return new class extends Migration
    */
   public function up(): void
   {
-    Schema::create('invoice', function (Blueprint $table) {
-      $table->id();
-      $table->string('description')->nullable();
-      $table->float('value')->default(0);
-      $table->unsignedBigInteger('address_id');
-      $table->unsignedBigInteger('user_id');
-      $table->timestamps();
+    Schema::table('invoices', function (Blueprint $table) {
+      $table
+        ->foreign('address_id')
+        ->references('id')
+        ->on('addresses');
     });
   }
 
@@ -26,6 +24,8 @@ return new class extends Migration
    */
   public function down(): void
   {
-    Schema::dropIfExists('invoice');
+    Schema::table('invoices', function (Blueprint $table) {
+      $table->dropForeign('address_id');
+    });
   }
 };
