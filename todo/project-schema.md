@@ -5,9 +5,9 @@
 - **Usuários**
 
   - Usuários x Tarefas
-    - Um usuário pode criar várias tarefas
+    - Um usuário pode criar _várias_ tarefas
   - Usuários x Categorias
-    - Um usuário pode criar ter várias categorias
+    - Um usuário pode criar ter _várias_ categorias
 
 - **Tarefas**
 
@@ -19,7 +19,7 @@
 - **Categorias**
 
   - Categorias x Tarefas
-    - Uma categoria pode ter várias tarefas
+    - Uma categoria pode ter _várias_ tarefas
   - Categorias x Usuários
     - Uma categoria SEMPRE vai _pertencer_ à um usuário
 
