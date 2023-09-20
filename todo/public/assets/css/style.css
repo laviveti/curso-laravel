@@ -66,19 +66,44 @@ main {
 section.graph {
   display: flex;
   flex-direction: column;
+  padding: 5px;
   width: 33%;
 }
 
 .graph_header {
   display: flex;
   align-items: center;
-  gap: 0.25rem;
+  gap: 0.5rem;
 }
 
 hr.linha_header {
-  width: 3.125rem;
+  width: 6.25rem;
   display: inline-block;
 }
-.graph_header--subtitle {
+.graph_subtitle {
   margin-top: 0.75rem;
+}
+
+.graph-placeholder {
+  background-color: #ccc;
+  width: 18.75rem;
+  height: 18.75rem;
+  margin-top: 20px;
+  margin-left: 48px;
+}
+
+.graph_header--tasks_left {
+  text-align: center;
+  margin-top: 10px;
+}
+
+.list {
+  padding: 0.25rem 1rem;
+}
+
+.list_header {
+  display: flex;
+}
+
+.list_header-select {
 }
