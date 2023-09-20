@@ -18,22 +18,18 @@ body {
   height: 100vh;
   background-color: var(--background-white);
 }
-
 .container {
   width: inherit;
   height: inherit;
   display: flex;
 }
-
 .sidebar {
   width: 100px;
   background-color: var(--color-primary);
 }
-
 .container {
   width: inherit;
 }
-
 nav {
   height: 100px;
   background-color: var(--background-light);
@@ -43,39 +39,32 @@ nav {
   justify-content: flex-end;
   padding-right: 20px;
 }
-
 a.btn {
   text-decoration: none;
 }
-
 .btn {
   padding: 20px 30px;
   border-radius: 0.75rem;
 }
-
 .btn-primary {
   background-color: var(--color-primary);
   color: white;
 }
-
 main {
   display: flex;
   padding: 1.25rem;
 }
-
 section.graph {
   display: flex;
   flex-direction: column;
   padding: 5px;
   width: 33%;
 }
-
 .graph_header {
   display: flex;
   align-items: center;
   gap: 0.5rem;
 }
-
 hr.linha_header {
   width: 6.25rem;
   display: inline-block;
@@ -83,7 +72,6 @@ hr.linha_header {
 .graph_subtitle {
   margin-top: 0.75rem;
 }
-
 .graph-placeholder {
   background-color: #ccc;
   width: 18.75rem;
@@ -91,19 +79,48 @@ hr.linha_header {
   margin-top: 20px;
   margin-left: 48px;
 }
-
 .graph_header--tasks_left {
   text-align: center;
   margin-top: 10px;
 }
-
 .list {
+  flex: 1;
   padding: 0.25rem 1rem;
 }
-
 .list_header {
   display: flex;
 }
-
 .list_header-select {
+}
+.task_list {
+  display: flex;
+  background-color: teal;
+  flex-direction: column;
+  margin-top: 1.25rem;
+  width: 100%;
+}
+.task {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.title {
+  display: flex;
+  align-items: center;
+  background-color: green;
+  flex: 1;
+}
+.priority,
+.actions {
+  flex: 1;
+}
+
+.actions {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.task_title {
+  padding-left: 0.75rem;
+  font-weight: bold;
 }
