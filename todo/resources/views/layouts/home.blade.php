@@ -14,7 +14,9 @@
 
 <body>
   <div class="container">
-    <div class="sidebar">Logo</div>
+    <div class="sidebar">
+      <img src="/assets/images/logo.png" alt="Logo da aplicação" />
+    </div>
     <div class="content">
       <nav>
         <a href="#" class="btn btn-primary">
@@ -54,37 +56,8 @@
                 <div>Categoria</div>
               </div>
               <div class="actions">
-                Editar - Excluir
-              </div>
-
-            </div>
-            <div class="task">
-
-              <div class="title">
-                <input type="checkbox" />
-                <div class="task_title">Título da tarefa</div>
-              </div>
-              <div class="priority">
-                <div class="sphere"></div>
-                <div>Categoria</div>
-              </div>
-              <div class="actions">
-                Editar - Excluir
-              </div>
-
-            </div>
-            <div class="task">
-
-              <div class="title">
-                <input type="checkbox" />
-                <div class="task_title">Título da tarefa</div>
-              </div>
-              <div class="priority">
-                <div class="sphere"></div>
-                <div>Categoria</div>
-              </div>
-              <div class="actions">
-                Editar - Excluir
+                <a href="#"><img src="/assets/images/icon-edit.png" alt="Editar"></a>
+                <a href="#"><img src="/assets/images/icon-delete.png" alt="Editar"></a>
               </div>
 
             </div>
