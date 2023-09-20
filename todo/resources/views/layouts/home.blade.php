@@ -27,15 +27,19 @@
         <section class="graph">
           <div class="graph_header">
             <h2>Progresso do dia</h2>
-            <hr class="linha_header">
+            <div class="graph_header-line"></div>
             Data
           </div>
           <div class="graph_subtitle"> Tarefas: <b>3/6</b> </div>
 
           <div class="graph-placeholder">
+            {{-- Gráfico feito em CSS --}}
           </div>
 
-          <p class="graph_header--tasks_left">Restam 3 tarefas para serem realizadas</p>
+          <div class="tasks_left_footer">
+            <img src="/assets/images/icon-info.png" alt="">
+            Restam 3 tarefas para serem realizadas
+          </div>
 
         </section>
         <section class="list">

@@ -80,9 +80,11 @@ section.graph {
   gap: 0.5rem;
 }
 
-hr.linha_header {
-  width: 6.25rem;
-  display: inline-block;
+.graph_header-line {
+  width: 6rem;
+  height: 0.125rem;
+  background-color: #000;
+  opacity: 20%;
 }
 
 .graph_subtitle {
@@ -94,13 +96,16 @@ hr.linha_header {
   background-size: contain;
   width: 18.75rem;
   height: 18.75rem;
-  margin-top: 20px;
-  margin-left: 48px;
+  margin-top: 3rem;
+  margin-left: 2rem;
 }
 
-.graph_header--tasks_left {
-  text-align: center;
-  margin-top: 10px;
+.tasks_left_footer {
+  display: flex;
+  gap: 0.5rem;
+  align-items: center;
+  justify-content: center;
+  margin-top: 3rem;
 }
 
 .list {
