@@ -3,7 +3,7 @@
 namespace Database\Factories;
 
 use App\Models\Category;
-use App\Models\User;
+// use App\Models\User;
 use Illuminate\Database\Eloquent\Factories\Factory;
 
 /**
@@ -18,12 +18,19 @@ class TaskFactory extends Factory
    */
   public function definition(): array
   {
+    $randomCategory = Category::all()->random(); //TODO: my solution #mod8_lesson16
+    // $randomUser = User::all()->random(); //TODO: teacher's solution
+
     return [
       'title' => $this->faker->text(30),
       'description' => $this->faker->text(60),
       'due_date' => $this->faker->dateTime(),
-      'user_id' => User::all()->random(),
-      'category_id' => Category::all()->random()
+      'user_id' => $randomCategory->user_id, //TODO: my solution
+      'category_id' => $randomCategory->id //TODO: my solution
     ];
   }
 }
+
+/**
+ ( ⛔ TEACHER'S SOLUCTION: Pode acontecer de um usuário não ter criado uma categoria, sendo possível ocasionar um erro ao inputar "category_id" na factory )
+ */
