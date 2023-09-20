@@ -18,3 +18,52 @@ body {
   height: 100vh;
   background-color: var(--background-white);
 }
+
+.container {
+  width: inherit;
+  height: inherit;
+  display: flex;
+}
+
+.sidebar {
+  width: 100px;
+  background-color: var(--color-primary);
+}
+
+.container {
+  width: inherit;
+}
+
+nav {
+  height: 100px;
+  background-color: var(--background-light);
+  width: calc(100vw - 100px);
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  padding-right: 20px;
+}
+
+a.btn {
+  text-decoration: none;
+}
+
+.btn {
+  padding: 20px 30px;
+  border-radius: 12px;
+}
+
+.btn-primary {
+  background-color: var(--color-primary);
+  color: white;
+}
+
+main {
+  display: flex;
+  padding: 20px;
+}
+
+section.graph {
+  background-color: teal;
+  width: 33%;
+}
