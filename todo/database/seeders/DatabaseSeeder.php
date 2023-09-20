@@ -18,7 +18,7 @@ class DatabaseSeeder extends Seeder
       UserSeeder::class,
     ]);
 
-    Category::factory(10)->create();
+    Category::factory(5)->create();
     Task::factory(30)->create();
   }
 }
