@@ -26,9 +26,11 @@
       <main>
         <section class="graph">
           <div class="graph_header">
-            <h2>Progresso do dia</h2>
+            <h2>Progresso do Dia</h2>
             <div class="graph_header-line"></div>
-            Data
+            <div class="graph_header-date">
+              Data
+            </div>
           </div>
           <div class="graph_subtitle"> Tarefas: <b>3/6</b> </div>
 
