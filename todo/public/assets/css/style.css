@@ -50,7 +50,7 @@ a.btn {
 
 .btn {
   padding: 20px 30px;
-  border-radius: 12px;
+  border-radius: 0.75rem;
 }
 
 .btn-primary {
@@ -60,10 +60,25 @@ a.btn {
 
 main {
   display: flex;
-  padding: 20px;
+  padding: 1.25rem;
 }
 
 section.graph {
-  background-color: teal;
+  display: flex;
+  flex-direction: column;
   width: 33%;
+}
+
+.graph_header {
+  display: flex;
+  align-items: center;
+  gap: 0.25rem;
+}
+
+hr.linha_header {
+  width: 3.125rem;
+  display: inline-block;
+}
+.graph_header--subtitle {
+  margin-top: 0.75rem;
 }

@@ -22,7 +22,16 @@
         </a>
       </nav>
       <main>
-        <section class="graph">grafico</section>
+        <section class="graph">
+          <div class="graph_header">
+            <h2>Progresso do dia</h2>
+            <hr class="linha_header">
+            Data
+          </div>
+          <div class="graph_header--subtitle">
+            Tarefas: <b>3/6</b>
+          </div>
+        </section>
         <section class="list">lista</section>
       </main>
     </div>
