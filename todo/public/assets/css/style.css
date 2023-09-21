@@ -50,16 +50,17 @@ nav {
 
 a.btn {
   text-decoration: none;
+  margin-left: 0.75rem;
 }
 
 .btn {
   padding: 20px 30px;
   border-radius: 0.75rem;
-  transition:  all .3s ease-in-out;
+  transition: all 0.3s ease-in-out;
 }
 
 .btn:hover {
- transform: scale(1.05);
+  transform: scale(1.05);
 }
 
 .btn-primary {
@@ -98,7 +99,7 @@ section.graph {
 .graph_header-date {
   display: flex;
   align-items: center;
-  font-size: .75rem;
+  font-size: 0.75rem;
   white-space: nowrap;
 }
 
@@ -126,7 +127,6 @@ section.graph {
 .list {
   flex: 1;
   padding: 1.25rem 1.25rem 0rem 1.25rem;
-
 }
 
 .list_header {
@@ -154,12 +154,12 @@ section.graph {
   justify-content: space-between;
   padding: 1.75rem 1rem;
   border-bottom: 1px solid var(--background-light);
-  transition: all .3s ease-in-out;
+  transition: all 0.3s ease-in-out;
 }
 
 .task:hover {
   background-color: var(--background-light);
-  border-radius: .75rem;
+  border-radius: 0.75rem;
   transform: scale(1.01);
 }
 
@@ -180,11 +180,11 @@ section.graph {
   display: flex;
   gap: 1.25rem;
   justify-content: flex-end;
-  transition: all .3s ease-in-out;
+  transition: all 0.3s ease-in-out;
   overflow: hidden;
 }
 
-.actions>a:hover{
+.actions > a:hover {
   transform: scale(1.2);
 }
 

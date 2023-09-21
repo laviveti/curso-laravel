@@ -4,7 +4,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>{{$pageTitle ?? 'B7Web Todo - Página inicial'}}</title>
+  <title>{{ $pageTitle ?? 'B7Web Todo' }}</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&family=Rubik:wght@400;500&display=swap"
@@ -15,16 +15,18 @@
 <body>
   <div class="container">
     <div class="sidebar">
-      <img src="/assets/images/logo.png" alt="Logo da aplicação" />
+      <a href="/">
+        <img src="/assets/images/logo.png" alt="Logo da aplicação" />
+      </a>
     </div>
     <div class="content">
       <nav>
-        <a href="#" class="btn btn-primary">
-          Criar Tarefa
-        </a>
+
+        {{ $btn ?? null }}
+
       </nav>
       <main>
-        {{$slot}}
+        {{ $slot }}
       </main>
     </div>
   </div>
