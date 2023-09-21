@@ -29,7 +29,9 @@
             <h2>Progresso do Dia</h2>
             <div class="graph_header-line"></div>
             <div class="graph_header-date">
-              Data
+              <img src="/assets/images/icon-prev.png" alt="Anterior">
+              13 de Dez
+              <img src="/assets/images/icon-next.png" alt="Próximo">
             </div>
           </div>
           <div class="graph_subtitle"> Tarefas: <b>3/6</b> </div>

@@ -69,20 +69,19 @@ a.btn {
 
 main {
   display: flex;
-  padding: 1.25rem;
 }
 
 section.graph {
   display: flex;
   flex-direction: column;
-  padding: 5px;
+  padding: 1.25rem 1.25rem 0rem 1.25rem;
   width: 33%;
 }
 
 .graph_header {
   display: flex;
   align-items: center;
-  gap: 2rem;
+  justify-content: space-between;
 }
 
 .graph_header h2 {
@@ -97,7 +96,10 @@ section.graph {
 }
 
 .graph_header-date {
-
+  display: flex;
+  align-items: center;
+  font-size: .75rem;
+  white-space: nowrap;
 }
 
 .graph_subtitle {
@@ -123,7 +125,8 @@ section.graph {
 
 .list {
   flex: 1;
-  padding: 0.25rem 1rem;
+  padding: 1.25rem 1.25rem 0rem 1.25rem;
+
 }
 
 .list_header {
@@ -131,6 +134,11 @@ section.graph {
 }
 
 .list_header-select {
+  background-color: transparent;
+  border: 0;
+  font-weight: 500;
+  font-size: 1rem;
+  color: var(--text-dark);
 }
 
 .task_list {
@@ -173,6 +181,7 @@ section.graph {
   gap: 1.25rem;
   justify-content: flex-end;
   transition: all .3s ease-in-out;
+  overflow: hidden;
 }
 
 .actions>a:hover{
