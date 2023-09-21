@@ -54,6 +54,8 @@ a.btn {
 }
 
 .btn {
+  border: 0;
+  cursor: pointer;
   padding: 20px 30px;
   border-radius: 0.75rem;
   transition: all 0.3s ease-in-out;
