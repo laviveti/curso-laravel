@@ -173,12 +173,14 @@ section.graph {
 .priority,
 .actions {
   display: flex;
+
   align-items: center;
   flex: 1;
 }
 
 .actions {
   display: flex;
+  padding: 0.25rem 0.25rem 0 0;
   gap: 1.25rem;
   justify-content: flex-end;
   transition: all 0.3s ease-in-out;
@@ -221,10 +223,22 @@ section.graph {
   margin-bottom: 0.5rem;
 }
 
-.inputArea > input {
+.inputArea > input,
+.inputArea > select {
   height: 2.5rem;
   width: 25rem;
+  border: 1px solid #333;
+  border-radius: 0.5rem;
+  padding: 0.25rem 0.5rem;
 }
 .inputArea > input::placeholder {
+  padding: 0.25rem;
+}
+
+.inputArea > textarea {
+  height: 7.5rem;
+  width: 25rem;
+  border: 1px solid #333;
+  border-radius: 0.5rem;
   padding: 0.5rem;
 }
