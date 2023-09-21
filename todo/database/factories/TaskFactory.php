@@ -22,6 +22,7 @@ class TaskFactory extends Factory
     // $randomUser = User::all()->random(); //TODO: teacher's solution
 
     return [
+      'is_done' => $this->faker->boolean(),
       'title' => $this->faker->text(30),
       'description' => $this->faker->text(60),
       'due_date' => $this->faker->dateTime(),

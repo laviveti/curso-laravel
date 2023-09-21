@@ -1,6 +1,6 @@
 <div class="task">
   <div class="title">
-    <input type="checkbox" />
+    <input type="checkbox" @if ($task->is_done) checked @endif />
     <div class="task_title">{{ $task->title ?? 'Título da tarefa indisponível' }}</div>
   </div>
   <div class="priority">
