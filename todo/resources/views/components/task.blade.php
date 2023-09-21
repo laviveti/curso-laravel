@@ -8,7 +8,7 @@
     <div>{{ $data['category'] ?? null }}</div>
   </div>
   <div class="actions">
-    <a href="http://meusite.com.br/tasks/edit/{{ $data['id'] ?? null }}" target="_blank">
+    <a href="/task/edit/{{ $data['id'] ?? null }}" target="_blank">
       <img src="/assets/images/icon-edit.png" alt="Editar tarefa">
     </a>
     <a href="http://meusite.com.br/tasks/delete/{{ $data['id'] ?? null }}" target="_blank">

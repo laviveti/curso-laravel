@@ -6,5 +6,8 @@ use Illuminate\Http\Request;
 
 class TaskController extends Controller
 {
-    //
+  public function create(Request $request)
+  {
+    return view('tasks.create');
+  }
 }

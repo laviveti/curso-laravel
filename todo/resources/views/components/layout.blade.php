@@ -21,6 +21,9 @@
     </div>
     <div class="content">
       <nav>
+        <a class="btn" href="{{ route('home') }}">Home (tmp) </a>
+        <a class="btn" href="{{ route('login') }}">Login (tmp) </a>
+        <a class="btn" href="{{ route('register') }}">Registre-se (tmp) </a>
 
         {{ $btn ?? null }}
 
