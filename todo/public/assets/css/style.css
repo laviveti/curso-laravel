@@ -200,3 +200,31 @@ section.graph {
   padding-left: 0.75rem;
   font-weight: bold;
 }
+
+#create_task_section {
+  margin: auto;
+  padding-top: 1.25rem;
+}
+
+#create_task_section > h1 {
+  text-align: center;
+  margin-bottom: 1.25rem;
+}
+
+.inputArea {
+  display: block;
+  margin: 0.75rem;
+}
+
+.inputArea > label {
+  display: block;
+  margin-bottom: 0.5rem;
+}
+
+.inputArea > input {
+  height: 2.5rem;
+  width: 25rem;
+}
+.inputArea > input::placeholder {
+  padding: 0.5rem;
+}
