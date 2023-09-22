@@ -8,15 +8,11 @@
         <h1>Criar uma nova tarefa</h1>
 
         <form action="">
-            <x-form.text_input name="title" label="Título da tarefa:" required='required'
-                placeholde="Digite o nome da tarefa" />
 
-            <x-form.text_input></x-form.text_input>
+            <x-form.text_input name="title" label="Título da tarefa" placeholder="Digite o nome da tarefa" required />
+            <x-form.text_input name="due_date" label="Data de realização:" type="date" required />
 
-            <div class="inputArea">
-                <label for="due_date">Data de realização:</label>
-                <input type="date" id="due_date" name="due_date" required />
-            </div>
+
 
             <div class="inputArea">
                 <label for="category">Categoria:</label>
