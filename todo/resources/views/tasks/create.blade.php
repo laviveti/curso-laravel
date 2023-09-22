@@ -1,38 +1,29 @@
 <x-layout pageTitle="B7Web Todo - Criar Tarefa">
 
-    <x-slot:btn>
-        <a href=" {{ route('home') }} " class="btn btn-primary">Voltar</a>
-    </x-slot:btn>
+  <x-slot:btn>
+    <a href=" {{ route('home') }} " class="btn btn-primary">Voltar</a>
+  </x-slot:btn>
 
-    <section id="create_task_section">
-        <h1>Criar uma nova tarefa</h1>
+  <section id="create_task_section">
+    <h1>Criar uma nova tarefa</h1>
 
-        <form action="">
+    <form action="">
 
-            <x-form.text_input name="title" label="Título da tarefa" placeholder="Digite o nome da tarefa" required />
-            <x-form.text_input name="due_date" label="Data de realização:" type="date" required />
+      <x-form.text-input name="title" label="Título da tarefa" placeholder="Digite o nome da tarefa" required />
+      <x-form.text-input name="due_date" label="Data de realização:" type="date" required />
 
+      <x-form.select-input name="category" label="Categoria">
+        <option>Valor qualquer</option>
+      </x-form.select-input>
 
+      <x-form.textarea-input name="description" label="Descrição"
+        placeholder="Digite uma descrição para sua tarefa
+        "></x-form.textarea-input> {{-- Não abrir/espaçar a tag --}}
 
-            <div class="inputArea">
-                <label for="category">Categoria:</label>
-                <select id="category" name="category" required>
-                    <div class="select-container"></div>
-                    <option value="" selected disabled>Selecione a categoria</option>
-                    <option>Valor qualquer</option>
-                </select>
-            </div>
+      <x-form.form-button submitLabel="Criar tarefa" resetLabel="Limpar formulário" />
 
-            <div class="inputArea">
-                <label for="description">Descrição:</label>
-                <textarea id="description" name="description" placeholder="Digite uma descrição para sua tarefa"></textarea>
-            </div>
+    </form>
 
-            <div class="inputArea">
-                <button class="btn btn-primary" type="submit">Criar tarefa</button>
-            </div>
-        </form>
-
-    </section>
+  </section>
 
 </x-layout>
