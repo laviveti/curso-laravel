@@ -7,7 +7,8 @@
     <section id="create_task_section">
         <h1>Criar uma nova tarefa</h1>
 
-        <form action="">
+        <form method="POST" action="{{route('task.create_action')}}">
+          @csrf
 
             <x-form.text-input name="title" label="Título da tarefa" placeholder="Digite o nome da tarefa" required />
             <x-form.text-input type="date" name="due_date" label="Data de realização" />
