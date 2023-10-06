@@ -15,6 +15,11 @@
       action="{{ route('task.edit_action') }}"
     >
       @csrf
+      <input
+        type="hidden"
+        name="id"
+        value="{{ $task->id }}"
+      >
 
       <x-form.text-input
         name="title"
