@@ -24,7 +24,7 @@
         value="{{ $task->title }}"
       />
       <x-form.text-input
-        type="date"
+        type="datetime-local"
         name="due_date"
         label="Data de realização"
         value="{{ $task->due_date }}"
