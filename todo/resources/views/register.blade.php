@@ -1,16 +1,49 @@
-<x-layout>
+<x-layout pageTitle="B7Web Todo - Criar Tarefa">
 
   <x-slot:btn>
     <a
-      href="{{ route('login') }}"
+      href=" {{ route('home') }} "
       class="btn btn-primary"
     >
-      Já possui conta? <u style="color: inherit">Faça login!</u>
+      Voltar
     </a>
   </x-slot:btn>
 
-  <h1>
+  <section id="task_section">
+    <h1>Criar uma nova conta</h1>
 
-    Registre-se
-  </h1>
+    <form
+      method="POST"
+      action="{{ route('user.register_action') }}"
+    >
+      @csrf
+
+      <x-form.text-input
+        name="name"
+        label="Seu nome"
+        placeholder="Seu nome"
+        required
+      />
+      <x-form.text-input
+        type="email"
+        name="email"
+        label="Seu e-mail"
+        placeholder="Seu e-mail"
+      />
+      <x-form.text-input
+        type="password"
+        name="password"
+        label="Sua senha"
+        placeholder="Sua senha"
+      />
+
+      <x-form.form-button
+        submitLabel="Registrar-me"
+        resetLabel="Limpar"
+      />
+
+    </form>
+
+  </section>
+
 </x-layout>
