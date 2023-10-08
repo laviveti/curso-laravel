@@ -16,6 +16,12 @@
     >
       @csrf
 
+      <x-form.checkbox-input
+        name="is_done"
+        label="Tarefa realizada?"
+        checked="{{ $task->is_done }}"
+      />
+
       <x-form.text-input
         name="title"
         label="Título da tarefa"
