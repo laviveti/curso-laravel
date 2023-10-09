@@ -18,13 +18,28 @@ class AuthController extends Controller
     return view('register');
   }
 
+  public function login_action(Request $request)
+  {
+    $validator =  $request->validate([
+      'email' => 'required|email',
+      'password' => 'required|min:6',
+    ]);
+
+    dd($validator);
+  }
+
   public function register_action(Request $request)
   {
+    $messages = [
+      'email.regex' => 'O e-mail deve terminar com ".com" ou ".br"',
+      'confirmed' => 'Confirmação de senha não corresponde'
+    ];
+
     $request->validate([
       'name' => 'required',
-      'email' => 'required|email|unique:users',
+      'email' => ['required', 'email', 'regex:/.*(.com|.br)$/'],
       'password' => 'required|min:6|confirmed'
-    ]);
+    ], $messages);
 
     $data = $request->only('name', 'email', 'password');
     User::create($data);
