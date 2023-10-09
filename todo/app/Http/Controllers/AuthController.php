@@ -20,7 +20,7 @@ class AuthController extends Controller
 
   public function login_action(Request $request)
   {
-    $validator =  $request->validate([
+    $request->validate([
       'email' => 'required|email',
       'password' => 'required|min:6',
     ]);
