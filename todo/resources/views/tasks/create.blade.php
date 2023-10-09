@@ -6,6 +6,14 @@
       class="btn btn-primary"
     >Voltar</a>
   </x-slot:btn>
+  <x-slot:btn>
+    <a
+      href=" {{ route('home') }} "
+      class="btn btn-primary"
+    >
+      Voltar
+    </a>
+  </x-slot:btn>
 
   <section id="task_section">
     <h1>Criar uma nova tarefa</h1>
@@ -23,7 +31,7 @@
         required
       />
       <x-form.text-input
-        type="datetime-local"
+        type="date"
         name="due_date"
         label="Data de realização"
       />
