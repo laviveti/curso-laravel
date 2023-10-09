@@ -23,10 +23,11 @@ class AuthController extends Controller
     $request->validate([
       'name' => 'required',
       'email' => 'required|email|unique:users',
-      'password' => 'required|min:6'
+      'password' => 'required|min:6|confirmed'
     ]);
+
     $data = $request->only('name', 'email', 'password');
-    $userCreated = User::create($data);
-    dd($userCreated);
+    User::create($data);
+    return redirect(route('login'));
   }
 }
