@@ -25,7 +25,7 @@ class AuthController extends Controller
       'password' => 'required|min:6',
     ]);
 
-    dd($validator);
+    return redirect(route('login'));
   }
 
   public function register_action(Request $request)
