@@ -26,6 +26,7 @@
         name="title"
         label="Título da tarefa"
         placeholder="Digite o nome da tarefa"
+        value="{{ $task->title }}"
         required
       />
       <x-form.text-input

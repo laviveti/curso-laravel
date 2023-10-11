@@ -1,19 +1,29 @@
 <x-layout>
 
   <x-slot:btn>
-    <a href="{{ route('task.create') }}" class="btn btn-primary">
+    <a
+      href="{{ route('task.create') }}"
+      class="btn btn-primary"
+    >
       Criar Tarefa
     </a>
   </x-slot:btn>
 
   <section class="graph">
     <div class="graph_header">
+      {{ $authUser-> }}
       <h2>Progresso do Dia</h2>
       <div class="graph_header-line"></div>
       <div class="graph_header-date">
-        <img src="/assets/images/icon-prev.png" alt="Anterior">
+        <img
+          src="/assets/images/icon-prev.png"
+          alt="Anterior"
+        >
         13 de Dez
-        <img src="/assets/images/icon-next.png" alt="Próximo">
+        <img
+          src="/assets/images/icon-next.png"
+          alt="Próximo"
+        >
       </div>
 
     </div>
@@ -23,7 +33,10 @@
       {{-- Gráfico feito em CSS --}}
     </div>
     <div class="tasks_left_footer">
-      <img src="/assets/images/icon-info.png" alt="">
+      <img
+        src="/assets/images/icon-info.png"
+        alt=""
+      >
       Restam 3 tarefas para serem realizadas
     </div>
 
