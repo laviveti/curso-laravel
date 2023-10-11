@@ -34,6 +34,16 @@ class AuthController extends Controller
     return view('register');
   }
 
+  public function login_action(Request $request)
+  {
+    $validator =  $request->validate([
+      'email' => 'required|email',
+      'password' => 'required|min:6',
+    ]);
+
+    dd($validator);
+  }
+
   public function register_action(Request $request)
   {
     $messages = [
@@ -44,6 +54,7 @@ class AuthController extends Controller
       'name' => 'required',
       'email' => ['required', 'email', 'unique:users', 'regex:/^.+@.+\\.(com|br)$/'],
       'password' => 'required|min:6|confirmed'
+    ], $messages);
     ], $messages);
 
     $data = $request->only('name', 'email', 'password');
