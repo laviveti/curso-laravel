@@ -1,16 +1,7 @@
 <x-layout pageTitle="B7Web Todo - Criar Tarefa">
 
-  <x-slot:btn>
-    <a
-      href=" {{ route('home') }} "
-      class="btn btn-primary"
-    >
-      Voltar
-    </a>
-  </x-slot:btn>
-
   <section id="task_section">
-    <h1>Faça login</h1>
+    <h1>Entre com sua conta</h1>
 
     @if ($errors->any())
       <ul class="alert alert-error">
@@ -30,13 +21,13 @@
         type="email"
         name="email"
         label="Seu e-mail"
-        placeholder="Digite seu e-mail"
+        placeholder="Seu e-mail"
       />
       <x-form.text-input
         type="password"
         name="password"
         label="Sua senha"
-        placeholder="Digite sua senha"
+        placeholder="Sua senha"
       />
 
       <x-form.form-button
