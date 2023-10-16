@@ -39,6 +39,7 @@ class AuthController extends Controller
     $messages = [
       'email.regex' => 'O e-mail deve terminar com ".com" ou ".br"',
       'email.unique' => 'E-mail já existente na base de dados',
+      'password.min' => 'A senha deve ter no mínimo 6 caracteres',
       'password.confirmed' => 'Confirmação de senha não corresponde'
     ];
 

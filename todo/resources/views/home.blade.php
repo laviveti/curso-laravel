@@ -11,7 +11,7 @@
 
   <section class="graph">
     <div class="graph_header">
-      {{ $authUser-> }}
+      {{-- {{ $authUser-> }} --}}
       <h2>Progresso do Dia</h2>
       <div class="graph_header-line"></div>
       <div class="graph_header-date">
