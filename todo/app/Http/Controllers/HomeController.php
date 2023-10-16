@@ -16,6 +16,8 @@ class HomeController extends Controller
     /** @var User|null $authUser */
     $authUser = Auth::user();
 
+    if(!$authUser) return redirect()->route('login');
+
     return view('home', [
       'tasks' => $tasks,
       'authUser' => $authUser
