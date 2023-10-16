@@ -11,6 +11,10 @@ class AuthController extends Controller
 {
   public function index(Request $request)
   {
+    $isLoggedUser = Auth::check();
+    if($isLoggedUser) {
+      return redirect()->route('home');
+    }
     return view('login');
   }
 
@@ -31,6 +35,8 @@ class AuthController extends Controller
 
   public function register(Request $request)
   {
+    $isLoggedUser = Auth::check();
+    if ($isLoggedUser) return redirect()->route('home');
     return view('register');
   }
 
