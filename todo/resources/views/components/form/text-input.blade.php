@@ -6,5 +6,6 @@
     name="{{ $name }}"
     placeholder="{{ $placeholder ?? null }}"
     {{ !empty($required) ? 'required' : null }}
+    value="{{ $value ?? '' }}"
   />
 </div>

@@ -27,7 +27,6 @@
         placeholder="Digite o nome da tarefa"
         value="{{ $task->title }}"
         required
-        value="{{ $task->title }}"
       />
       <x-form.text-input
         type="datetime-local"

@@ -13,10 +13,8 @@ class HomeController extends Controller
   {
     $tasks = Task::all()->take(4);
 
-    /** @var User|null $authUser */
     $authUser = Auth::user();
 
-    if(!$authUser) return redirect()->route('login');
 
     return view('home', [
       'tasks' => $tasks,
