@@ -61,5 +61,11 @@
       @endforeach
 
     </div>
+
+    <script>
+      function taskUpdate(element) {
+        let isDone = element.checked
+      }
+    </script>
   </section>
 </x-layout>
