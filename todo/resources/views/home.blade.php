@@ -80,7 +80,11 @@
           })
         })
         let result = await rawResult.json()
-        console.log(result);
+        if (result.success) {
+          alert('Tarefa atualizada com sucesso');
+        } else {
+          element.checked = !status
+        }
       }
     </script>
   </section>
