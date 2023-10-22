@@ -63,8 +63,22 @@
     </div>
 
     <script>
-      function taskUpdate(element) {
-        let isDone = element.checked
+      async function taskUpdate(element) {
+        let status = element.checked;
+        let taskId = element.dataset.id;
+        let rawResult = await fetch(url, {
+          method: 'POST',
+          headers: {
+            'Content-Type': 'application/json',
+            'accept': 'application/json'
+          },
+          body: JSON.stringify({
+            status,
+            taskId
+          })
+        })
+        let result = await rawResult.json()
+        console.log(result);
       }
     </script>
   </section>

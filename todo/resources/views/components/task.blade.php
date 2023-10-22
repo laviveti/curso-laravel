@@ -4,6 +4,7 @@
     <input
       type="checkbox"
       onchange="taskUpdate(this)"
+      data-id="{{ $task['id'] }}"
       @if ($task->is_done) checked @endif
     />
     <div class="task_title">{{ $task->title ?? 'Título da tarefa indisponível' }}</div>
