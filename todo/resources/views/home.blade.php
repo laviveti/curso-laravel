@@ -66,6 +66,7 @@
       async function taskUpdate(element) {
         let status = element.checked;
         let taskId = element.dataset.id;
+        let url = '{{ route('task.update') }}';
         let rawResult = await fetch(url, {
           method: 'POST',
           headers: {
@@ -74,7 +75,8 @@
           },
           body: JSON.stringify({
             status,
-            taskId
+            taskId,
+            _token: '{{ csrf_token() }}'
           })
         })
         let result = await rawResult.json()
