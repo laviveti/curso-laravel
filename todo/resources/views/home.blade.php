@@ -47,7 +47,13 @@
         src="/assets/images/icon-info.png"
         alt=""
       >
-      Restam 3 tarefas para serem realizadas
+      @if ($undone_tasks_count == 0)
+        Todas as tarefas foram realizadas
+      @elseif ($undone_tasks_count == 1)
+        Resta {{ $undone_tasks_count }} tarefa para ser realizada
+      @else
+        Restam {{ $undone_tasks_count }} tarefas para serem realizadas
+      @endif
     </div>
 
   </section>
@@ -65,5 +71,31 @@
       @endforeach
 
     </div>
+    <script>
+      async function taskUpdate(element) {
+        let status = element.checked;
+        let taskId = element.dataset.id;
+        let url = '{{ route('task.update') }}';
+        let rawResult = await fetch(url, {
+          method: 'POST',
+          headers: {
+            'Content-Type': 'application/json',
+            'accept': 'application/json'
+          },
+          body: JSON.stringify({
+            status,
+            taskId,
+            _token: '{{ csrf_token() }}'
+          })
+        })
+        let result = await rawResult.json()
+        console.log(result);
+        if (result.success) {
+          alert('Tarefa atualizada com sucesso');
+        } else {
+          element.checked = !status
+        }
+      }
+    </script>
   </section>
 </x-layout>
