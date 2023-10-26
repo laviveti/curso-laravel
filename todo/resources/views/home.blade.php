@@ -21,15 +21,19 @@
       <h2>Progresso do Dia</h2>
       <div class="graph_header-line"></div>
       <div class="graph_header-date">
-        <img
-          src="/assets/images/icon-prev.png"
-          alt="Anterior"
-        >
-        13 de Dez
-        <img
-          src="/assets/images/icon-next.png"
-          alt="Próximo"
-        >
+        <a href="{{ route('home', ['date' => $datePrevButton]) }}">
+          <img
+            src="/assets/images/icon-prev.png"
+            alt="Anterior"
+          >
+        </a>
+        {{ $dateAsString }}
+        <a href="{{ route('home', ['date' => $dateNextButton]) }}">
+          <img
+            src="/assets/images/icon-next.png"
+            alt="Próximo"
+          >
+        </a>
       </div>
 
     </div>
