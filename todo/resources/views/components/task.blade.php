@@ -1,4 +1,4 @@
-<div class="task">
+<div class="task {{ $task['is_done'] ? 'task_done' : 'task_pending' }}">
 
   <div class="title">
     <input
