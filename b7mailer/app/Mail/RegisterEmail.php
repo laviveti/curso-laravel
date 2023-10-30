@@ -4,8 +4,8 @@ namespace App\Mail;
 
 use App\Models\User;
 use Illuminate\Bus\Queueable;
-use Illuminate\Contracts\Queue\ShouldQueue;
 use Illuminate\Mail\Mailable;
+use Illuminate\Mail\Mailables\Attachment;
 use Illuminate\Mail\Mailables\Content;
 use Illuminate\Mail\Mailables\Envelope;
 use Illuminate\Queue\SerializesModels;
@@ -21,6 +21,7 @@ class RegisterEmail extends Mailable
 
   public function __construct(User $user)
   {
+
     $this->user = $user;
   }
 
@@ -39,6 +40,10 @@ class RegisterEmail extends Mailable
    */
   public function content(): Content
   {
+
+    $this->subject('Assunto do e-mail');
+    $this->from('reply@gmail.com', 'Reply Bot');
+    $this->replyTo('kobsdev2019@gmail.com');
     $name = $this->user->name;
 
     return (new Content)
@@ -53,6 +58,12 @@ class RegisterEmail extends Mailable
    */
   public function attachments(): array
   {
-    return [];
+
+
+    return [
+      Attachment::fromPath(__DIR__ . "/../../public/boneco.png")
+        ->as('404.png')
+
+    ];
   }
 }
