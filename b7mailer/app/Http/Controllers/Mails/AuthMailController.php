@@ -13,14 +13,19 @@ class AuthMailController extends Controller
   public function sendRegisterMail()
   {
     $user = new User();
+
     $user->name = 'Alessandro K4';
+    $user->password = '123';
+    $user->email = 'test"teste.com';
+    $user->save();
+
     $registerEmail = new RegisterEmail($user);
 
     // return $registerEmail;
     Mail::to('ti.dev.lavive@gmail.com')
       ->cc('email@gmail.com')
       ->bcc('email2@gmail.com')
-      ->send($registerEmail);
+      ->queue($registerEmail);
 
   }
 }
