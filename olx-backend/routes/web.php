@@ -1,9 +1,14 @@
 <?php
 
+use Illuminate\Http\JsonResponse;
 use Illuminate\Support\Facades\Route;
 
+Route::get('/ping', function (): JsonResponse {
+  return response()->json(['pong' => true]);
+});
+
 // Utils routes
-// [] - /ping
+// [x] - /ping
 
 // Auth routes
 // [] - /user/signin
