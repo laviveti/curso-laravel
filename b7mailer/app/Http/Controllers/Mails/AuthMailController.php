@@ -3,6 +3,7 @@
 namespace App\Http\Controllers\Mails;
 
 use App\Http\Controllers\Controller;
+use App\Jobs\SendAuthMail;
 use App\Mail\RegisterEmail;
 use App\Models\User;
 use Illuminate\Support\Facades\Mail;
@@ -16,16 +17,9 @@ class AuthMailController extends Controller
 
     $user->name = 'Alessandro K4';
     $user->password = '123';
-    $user->email = 'test"teste.com';
+    $user->email = 'test19932@teste.com';
     $user->save();
 
-    $registerEmail = new RegisterEmail($user);
-
-    // return $registerEmail;
-    Mail::to('ti.dev.lavive@gmail.com')
-      ->cc('email@gmail.com')
-      ->bcc('email2@gmail.com')
-      ->queue($registerEmail);
-
+    SendAuthMail::dispatch($user);
   }
 }
