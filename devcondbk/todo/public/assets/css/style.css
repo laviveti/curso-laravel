@@ -1,0 +1,246 @@
+:root {
+  --background-light: #ddd6fe;
+  --background-white: #f6f5ff;
+  --text-dark: #0a0040;
+  --color-primary: #6143ff;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Rubik, sans-serif;
+  color: var(--text-dark);
+}
+
+body {
+  width: 100vw;
+  height: 100vh;
+  background-color: var(--background-white);
+}
+
+.container {
+  width: inherit;
+  height: inherit;
+  display: flex;
+}
+
+.sidebar {
+  width: 100px;
+  background-color: var(--color-primary);
+}
+
+.sidebar img {
+  max-width: 100%;
+}
+
+.container {
+  width: inherit;
+}
+
+nav {
+  height: 100px;
+  background-color: var(--background-light);
+  width: calc(100vw - 100px);
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  padding-right: 20px;
+}
+
+a.btn {
+  text-decoration: none;
+  margin-left: 0.75rem;
+}
+
+.btn {
+  border: 0;
+  cursor: pointer;
+  padding: 20px 30px;
+  border-radius: 0.75rem;
+  transition: all 0.3s ease-in-out;
+}
+
+.btn:hover {
+  transform: scale(1.05);
+}
+
+.btn-primary {
+  background-color: var(--color-primary);
+  color: white;
+}
+
+main {
+  display: flex;
+}
+
+section.graph {
+  display: flex;
+  flex-direction: column;
+  padding: 1.25rem 1.25rem 0rem 1.25rem;
+  width: 33%;
+}
+
+.graph_header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.graph_header h2 {
+  font-size: 1rem;
+}
+
+.graph_header-line {
+  width: 120px;
+  height: 0.125rem;
+  background-color: #000;
+  opacity: 20%;
+}
+
+.graph_header-date {
+  display: flex;
+  align-items: center;
+  font-size: 0.75rem;
+  white-space: nowrap;
+}
+
+.graph_subtitle {
+  margin-top: 0.75rem;
+}
+
+.graph-placeholder {
+  background: url("/assets/images/graph.png");
+  background-size: contain;
+  width: 18.75rem;
+  height: 18.75rem;
+  margin-top: 3rem;
+  margin-left: 2rem;
+}
+
+.tasks_left_footer {
+  display: flex;
+  gap: 0.5rem;
+  align-items: center;
+  justify-content: center;
+  margin-top: 3rem;
+}
+
+.list {
+  flex: 1;
+  padding: 1.25rem 1.25rem 0rem 1.25rem;
+}
+
+.list_header {
+  display: flex;
+}
+
+.list_header-select {
+  background-color: transparent;
+  border: 0;
+  font-weight: 500;
+  font-size: 1rem;
+  color: var(--text-dark);
+}
+
+.task_list {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  margin-top: 1.25rem;
+  width: 100%;
+}
+
+.task {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1.75rem 1rem;
+  border-bottom: 1px solid var(--background-light);
+  transition: all 0.3s ease-in-out;
+}
+
+.task:hover {
+  background-color: var(--background-light);
+  border-radius: 0.75rem;
+  transform: scale(1.01);
+}
+
+.title {
+  display: flex;
+  align-items: center;
+  flex: 1;
+}
+
+.priority,
+.actions {
+  display: flex;
+
+  align-items: center;
+  flex: 1;
+}
+
+.actions {
+  display: flex;
+  padding: 0.25rem 0.25rem 0 0;
+  gap: 1.25rem;
+  justify-content: flex-end;
+  transition: all 0.3s ease-in-out;
+  overflow: hidden;
+}
+
+.actions > a:hover {
+  transform: scale(1.2);
+}
+
+.sphere {
+  width: 1rem;
+  height: 1rem;
+  border-radius: 50%;
+  margin-right: 0.75rem;
+}
+
+.task_title {
+  padding-left: 0.75rem;
+  font-weight: bold;
+}
+
+#task_section {
+  margin: auto;
+  padding-top: 1.25rem;
+}
+
+#task_section > h1 {
+  text-align: center;
+  margin-bottom: 1.25rem;
+}
+
+.inputArea {
+  display: block;
+  margin: 0.75rem;
+}
+
+.inputArea > label {
+  display: block;
+  margin-bottom: 0.5rem;
+}
+
+.inputArea > input,
+.inputArea > select {
+  height: 2.5rem;
+  width: 25rem;
+  border: 1px solid #333;
+  border-radius: 0.5rem;
+  padding: 0.25rem 0.5rem;
+}
+.inputArea > input::placeholder {
+  padding: 0.25rem;
+}
+
+.inputArea > textarea {
+  height: 7.5rem;
+  width: 25rem;
+  border: 1px solid #333;
+  border-radius: 0.5rem;
+  padding: 0.5rem;
+}
