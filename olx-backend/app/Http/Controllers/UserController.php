@@ -4,9 +4,11 @@ namespace App\Http\Controllers;
 
 use App\Http\Middleware\VerifyCsrfToken;
 use App\Http\Requests\CreateUserRequest;
+use App\Http\Requests\SignInRequest;
 use App\Models\User;
 use Illuminate\Http\JsonResponse;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Hash;
 
 class UserController extends Controller
@@ -24,12 +26,31 @@ class UserController extends Controller
 
     return response()->json($response);
   }
-  public function signin(Request $request): JsonResponse
+  public function signin(SignInRequest $request): JsonResponse
   {
-    return response()->json(['method' => 'signin']);
+    $data = $request->only(['email', 'password']);
+
+    if (Auth::attempt($data)) {
+      /** @var \App\Models\User $user **/
+      $user = Auth::user();
+      $response = [
+        'error' => '',
+        'token' => $user->createToken('login_token')->plainTextToken
+      ];
+      return response()->json($response);
+    }
+
+    return response()->json(['error' => 'Usuário ou senha inválidos']);
   }
   public function me(Request $request): JsonResponse
   {
-    return response()->json(['method' => 'me']);
+    $user = Auth::user();
+    $response = [
+      'name' => $user->name,
+      'email' => $user->email,
+      'state' => $user->state->name,
+      'ads' => $user->advertises
+    ];
+    return response()->json($response);
   }
 }

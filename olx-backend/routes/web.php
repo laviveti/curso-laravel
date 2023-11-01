@@ -18,7 +18,7 @@ Route::post('/user/signin', [UserController::class, 'signin']);
 // [x] - /user/signup
 Route::post('/user/signup', [UserController::class, 'signup']);
 // [x] - /user/me
-Route::post('/user/me', [UserController::class, 'me']);
+Route::get('/user/me', [UserController::class, 'me'])->middleware('auth:sanctum');
 
 // Config routes
 // [x] - /states

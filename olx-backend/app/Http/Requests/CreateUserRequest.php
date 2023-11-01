@@ -17,7 +17,7 @@ class CreateUserRequest extends FormRequest
       'state_id' => 'required|exists:states,id'
     ];
   }
-  protected function failedValidation(Validator $validator)
+  protected function failedValidation(Validator $validator): void
   {
     throw new HttpResponseException(response()->json([
       'error' => array_values($validator->errors()->getMessages())[0][0],
