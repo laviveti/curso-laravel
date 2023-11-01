@@ -1,7 +1,8 @@
 <?php
 
-use App\Http\Controllers\CategoriesController;
-use App\Http\Controllers\StatesController;
+use App\Http\Controllers\CategoryController;
+use App\Http\Controllers\StateController;
+use App\Http\Controllers\UserController;
 use Illuminate\Http\JsonResponse;
 use Illuminate\Support\Facades\Route;
 
@@ -10,16 +11,20 @@ use Illuminate\Support\Facades\Route;
 Route::get('/ping', function (): JsonResponse {
   return response()->json(['pong' => true]);
 });
+
 // Auth routes
-// [] - /user/signin
-// [] - /user/signup
-// [] - /user/me
+// [x] - /user/signin
+Route::post('/user/signin', [UserController::class, 'signin']);
+// [x] - /user/signup
+Route::post('/user/signup', [UserController::class, 'signup']);
+// [x] - /user/me
+Route::post('/user/me', [UserController::class, 'me']);
 
 // Config routes
 // [x] - /states
-Route::get('/states', [StatesController::class, 'index']);
+Route::get('/states', [StateController::class, 'index']);
 // [x] - /categories
-Route::get('/categories', [CategoriesController::class, 'index']);
+Route::get('/categories', [CategoryController::class, 'index']);
 
 // Advertises routes
 // [] - /ad/list

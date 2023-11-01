@@ -2,15 +2,15 @@
 
 namespace App\Http\Controllers;
 
-use App\Models\State;
+use App\Models\Category;
 use Illuminate\Http\JsonResponse;
 use Illuminate\Http\Request;
 
-class StatesController extends Controller
+class CategoryController extends Controller
 {
   public function index(Request $request): JsonResponse
   {
-    $states = State::all();
-    return response()->json(['data' => $states]);
+    $categories = Category::all();
+    return response()->json(['data' => $categories]);
   }
 }
