@@ -3,12 +3,13 @@
 namespace App\Http\Controllers;
 
 use App\Http\Middleware\VerifyCsrfToken;
+use App\Http\Requests\CreateUserRequest;
 use Illuminate\Http\JsonResponse;
 use Illuminate\Http\Request;
 
 class UserController extends Controller
 {
-  public function signup(Request $request): JsonResponse
+  public function signup(CreateUserRequest $request): JsonResponse
   {
     return response()->json(['method' => 'signup']);
   }
