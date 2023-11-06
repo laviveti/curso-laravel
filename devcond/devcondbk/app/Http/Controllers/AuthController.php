@@ -138,4 +138,16 @@ class AuthController extends Controller
 
     return $array;
   }
+  public function validateToken()
+  {
+    $array = ['error' => ''];
+
+    $user = auth()->user();
+    $array['user'] = $user;
+
+    $properties = $this->getUnitProperties($user);
+    $array['user']['properties'] = $properties;
+
+    return $array;
+  }
 }
