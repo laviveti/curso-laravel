@@ -148,6 +148,14 @@ class AuthController extends Controller
     $properties = $this->getUnitProperties($user);
     $array['user']['properties'] = $properties;
 
+
+    return $array;
+  }
+
+  public function logout()
+  {
+    $array['error'] = '';
+    auth()->logout();
     return $array;
   }
 }
