@@ -31,8 +31,6 @@ class LostAndFoundController extends Controller
       $lost[$recKey]['photo'] = asset('storage/', $recValue['photo']);
     }
 
-
-
     $array['lost'] = $lost;
     $array['recovered'] = $recovered;
 
