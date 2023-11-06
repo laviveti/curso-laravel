@@ -26,7 +26,7 @@ Route::middleware('auth:api')->group(function () {
   Route::post('/auth/validate', [AuthController::class, 'validateToken']);
   Route::post('/auth/logout', [AuthController::class, 'logout']);
   // Mural de avisos
-  Route::get('/walls', [WallController::class, 'getMyWarnings']);
+  Route::get('/walls', [WallController::class, 'getAll']);
   Route::post('/wall/{id}/like', [WallController::class, 'like']);
   // Documentos
   Route::get('/docs', [DocController::class, 'getAll']);
