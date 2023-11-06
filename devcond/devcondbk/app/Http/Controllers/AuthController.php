@@ -18,7 +18,6 @@ class AuthController extends Controller
       'error' => 'Não autorizado'
     ], 401);
   }
-
   private function validateRequest(Request $request, array $rules)
   {
     $validator = Validator::make($request->all(), $rules);
@@ -45,7 +44,6 @@ class AuthController extends Controller
       ->where('id_owner', $user['id'])
       ->get();
   }
-
   public function register(Request $request)
   {
     $array = ['error' => ''];
@@ -151,7 +149,6 @@ class AuthController extends Controller
 
     return $array;
   }
-
   public function logout()
   {
     $array['error'] = '';
