@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Models\LostAndFound;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Validator;
 
 class LostAndFoundController extends Controller
 {
@@ -33,6 +34,26 @@ class LostAndFoundController extends Controller
 
     $array['lost'] = $lost;
     $array['recovered'] = $recovered;
+
+    return $array;
+  }
+
+  public function insert(Request $request)
+  {
+    $array = ['error' => ''];
+
+    $validator = Validator::make($request->all(), [
+      'description' => 'required',
+      'where' => 'required',
+      'photo' => 'required',
+    ]);
+
+    if (!$validator->fails()) {
+      $description = $request->input('description');
+      $where = $request->input('where');
+    } else {
+
+    }
 
     return $array;
   }
